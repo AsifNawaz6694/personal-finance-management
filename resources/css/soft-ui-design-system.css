@@ -1,0 +1,601 @@
+/* Soft UI Dashboard 3 Design System */
+:root {
+  /* Soft UI Color Palette */
+  --soft-ui-primary: #6366f1;
+  --soft-ui-primary-light: #818cf8;
+  --soft-ui-primary-dark: #4f46e5;
+  --soft-ui-primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  --soft-ui-secondary: #f472b6;
+  --soft-ui-secondary-light: #f9a8d4;
+  --soft-ui-secondary-dark: #ec4899;
+  --soft-ui-secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  
+  --soft-ui-success: #10b981;
+  --soft-ui-success-light: #34d399;
+  --soft-ui-success-dark: #059669;
+  --soft-ui-success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  
+  --soft-ui-warning: #f59e0b;
+  --soft-ui-warning-light: #fbbf24;
+  --soft-ui-warning-dark: #d97706;
+  --soft-ui-warning-gradient: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%);
+  
+  --soft-ui-danger: #ef4444;
+  --soft-ui-danger-light: #f87171;
+  --soft-ui-danger-dark: #dc2626;
+  --soft-ui-danger-gradient: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+  
+  --soft-ui-info: #3b82f6;
+  --soft-ui-info-light: #60a5fa;
+  --soft-ui-info-dark: #2563eb;
+  --soft-ui-info-gradient: linear-gradient(135deg, #2196f3 0%, #21cbf3 100%);
+  
+  /* Neutral Colors */
+  --soft-ui-gray-50: #f8fafc;
+  --soft-ui-gray-100: #f1f5f9;
+  --soft-ui-gray-200: #e2e8f0;
+  --soft-ui-gray-300: #cbd5e1;
+  --soft-ui-gray-400: #94a3b8;
+  --soft-ui-gray-500: #64748b;
+  --soft-ui-gray-600: #475569;
+  --soft-ui-gray-700: #334155;
+  --soft-ui-gray-800: #1e293b;
+  --soft-ui-gray-900: #0f172a;
+  
+  /* Soft UI Background Colors */
+  --soft-ui-bg-primary: #ffffff;
+  --soft-ui-bg-secondary: #f8fafc;
+  --soft-ui-bg-tertiary: #f1f5f9;
+  --soft-ui-bg-card: #ffffff;
+  --soft-ui-bg-overlay: rgba(15, 23, 42, 0.5);
+  
+  /* Soft UI Text Colors */
+  --soft-ui-text-primary: #1e293b;
+  --soft-ui-text-secondary: #64748b;
+  --soft-ui-text-tertiary: #94a3b8;
+  --soft-ui-text-inverse: #ffffff;
+  
+  /* Soft UI Shadows */
+  --soft-ui-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --soft-ui-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --soft-ui-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --soft-ui-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --soft-ui-shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --soft-ui-shadow-neumorphism: 8px 8px 16px rgba(163, 177, 198, 0.6), -8px -8px 16px rgba(255, 255, 255, 0.8);
+  --soft-ui-shadow-neumorphism-inset: inset 8px 8px 16px rgba(163, 177, 198, 0.6), inset -8px -8px 16px rgba(255, 255, 255, 0.8);
+  
+  /* Soft UI Border Radius */
+  --soft-ui-radius-sm: 0.375rem;
+  --soft-ui-radius: 0.5rem;
+  --soft-ui-radius-md: 0.75rem;
+  --soft-ui-radius-lg: 1rem;
+  --soft-ui-radius-xl: 1.5rem;
+  --soft-ui-radius-2xl: 2rem;
+  --soft-ui-radius-full: 9999px;
+  
+  /* Soft UI Spacing Scale */
+  --soft-ui-space-1: 0.25rem;
+  --soft-ui-space-2: 0.5rem;
+  --soft-ui-space-3: 0.75rem;
+  --soft-ui-space-4: 1rem;
+  --soft-ui-space-5: 1.25rem;
+  --soft-ui-space-6: 1.5rem;
+  --soft-ui-space-8: 2rem;
+  --soft-ui-space-10: 2.5rem;
+  --soft-ui-space-12: 3rem;
+  --soft-ui-space-16: 4rem;
+  --soft-ui-space-20: 5rem;
+  --soft-ui-space-24: 6rem;
+  
+  /* Soft UI Typography */
+  --soft-ui-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --soft-ui-font-size-xs: 0.75rem;
+  --soft-ui-font-size-sm: 0.875rem;
+  --soft-ui-font-size-base: 1rem;
+  --soft-ui-font-size-lg: 1.125rem;
+  --soft-ui-font-size-xl: 1.25rem;
+  --soft-ui-font-size-2xl: 1.5rem;
+  --soft-ui-font-size-3xl: 1.875rem;
+  --soft-ui-font-size-4xl: 2.25rem;
+  --soft-ui-font-size-5xl: 3rem;
+  --soft-ui-font-size-6xl: 3.75rem;
+  
+  /* Soft UI Line Heights */
+  --soft-ui-line-height-tight: 1.25;
+  --soft-ui-line-height-normal: 1.5;
+  --soft-ui-line-height-relaxed: 1.75;
+  
+  /* Soft UI Font Weights */
+  --soft-ui-font-weight-light: 300;
+  --soft-ui-font-weight-normal: 400;
+  --soft-ui-font-weight-medium: 500;
+  --soft-ui-font-weight-semibold: 600;
+  --soft-ui-font-weight-bold: 700;
+  --soft-ui-font-weight-extrabold: 800;
+  
+  /* Soft UI Transitions */
+  --soft-ui-transition-fast: 150ms ease-in-out;
+  --soft-ui-transition: 250ms ease-in-out;
+  --soft-ui-transition-slow: 350ms ease-in-out;
+  
+  /* Soft UI Z-Index */
+  --soft-ui-z-dropdown: 1000;
+  --soft-ui-z-sticky: 1020;
+  --soft-ui-z-fixed: 1030;
+  --soft-ui-z-modal-backdrop: 1040;
+  --soft-ui-z-modal: 1050;
+  --soft-ui-z-popover: 1060;
+  --soft-ui-z-tooltip: 1070;
+  --soft-ui-z-toast: 1080;
+}
+
+/* Soft UI Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--soft-ui-font-family);
+  font-size: var(--soft-ui-font-size-base);
+  line-height: var(--soft-ui-line-height-normal);
+  color: var(--soft-ui-text-primary);
+  background: var(--soft-ui-bg-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Soft UI Typography Classes */
+.soft-ui-text-xs { font-size: var(--soft-ui-font-size-xs); }
+.soft-ui-text-sm { font-size: var(--soft-ui-font-size-sm); }
+.soft-ui-text-base { font-size: var(--soft-ui-font-size-base); }
+.soft-ui-text-lg { font-size: var(--soft-ui-font-size-lg); }
+.soft-ui-text-xl { font-size: var(--soft-ui-font-size-xl); }
+.soft-ui-text-2xl { font-size: var(--soft-ui-font-size-2xl); }
+.soft-ui-text-3xl { font-size: var(--soft-ui-font-size-3xl); }
+.soft-ui-text-4xl { font-size: var(--soft-ui-font-size-4xl); }
+.soft-ui-text-5xl { font-size: var(--soft-ui-font-size-5xl); }
+.soft-ui-text-6xl { font-size: var(--soft-ui-font-size-6xl); }
+
+.soft-ui-font-light { font-weight: var(--soft-ui-font-weight-light); }
+.soft-ui-font-normal { font-weight: var(--soft-ui-font-weight-normal); }
+.soft-ui-font-medium { font-weight: var(--soft-ui-font-weight-medium); }
+.soft-ui-font-semibold { font-weight: var(--soft-ui-font-weight-semibold); }
+.soft-ui-font-bold { font-weight: var(--soft-ui-font-weight-bold); }
+.soft-ui-font-extrabold { font-weight: var(--soft-ui-font-weight-extrabold); }
+
+.soft-ui-text-primary { color: var(--soft-ui-text-primary); }
+.soft-ui-text-secondary { color: var(--soft-ui-text-secondary); }
+.soft-ui-text-tertiary { color: var(--soft-ui-text-tertiary); }
+.soft-ui-text-inverse { color: var(--soft-ui-text-inverse); }
+
+/* Soft UI Color Classes */
+.soft-ui-bg-primary { background: var(--soft-ui-bg-primary); }
+.soft-ui-bg-secondary { background: var(--soft-ui-bg-secondary); }
+.soft-ui-bg-tertiary { background: var(--soft-ui-bg-tertiary); }
+.soft-ui-bg-card { background: var(--soft-ui-bg-card); }
+
+.soft-ui-bg-primary-color { background: var(--soft-ui-primary); }
+.soft-ui-bg-secondary-color { background: var(--soft-ui-secondary); }
+.soft-ui-bg-success { background: var(--soft-ui-success); }
+.soft-ui-bg-warning { background: var(--soft-ui-warning); }
+.soft-ui-bg-danger { background: var(--soft-ui-danger); }
+.soft-ui-bg-info { background: var(--soft-ui-info); }
+
+.soft-ui-text-primary-color { color: var(--soft-ui-primary); }
+.soft-ui-text-secondary-color { color: var(--soft-ui-secondary); }
+.soft-ui-text-success { color: var(--soft-ui-success); }
+.soft-ui-text-warning { color: var(--soft-ui-warning); }
+.soft-ui-text-danger { color: var(--soft-ui-danger); }
+.soft-ui-text-info { color: var(--soft-ui-info); }
+
+/* Soft UI Gradient Classes */
+.soft-ui-gradient-primary { background: var(--soft-ui-primary-gradient); }
+.soft-ui-gradient-secondary { background: var(--soft-ui-secondary-gradient); }
+.soft-ui-gradient-success { background: var(--soft-ui-success-gradient); }
+.soft-ui-gradient-warning { background: var(--soft-ui-warning-gradient); }
+.soft-ui-gradient-danger { background: var(--soft-ui-danger-gradient); }
+.soft-ui-gradient-info { background: var(--soft-ui-info-gradient); }
+
+/* Soft UI Shadow Classes */
+.soft-ui-shadow-sm { box-shadow: var(--soft-ui-shadow-sm); }
+.soft-ui-shadow { box-shadow: var(--soft-ui-shadow); }
+.soft-ui-shadow-md { box-shadow: var(--soft-ui-shadow-md); }
+.soft-ui-shadow-lg { box-shadow: var(--soft-ui-shadow-lg); }
+.soft-ui-shadow-xl { box-shadow: var(--soft-ui-shadow-xl); }
+.soft-ui-shadow-neumorphism { box-shadow: var(--soft-ui-shadow-neumorphism); }
+.soft-ui-shadow-neumorphism-inset { box-shadow: var(--soft-ui-shadow-neumorphism-inset); }
+
+/* Soft UI Border Radius Classes */
+.soft-ui-radius-sm { border-radius: var(--soft-ui-radius-sm); }
+.soft-ui-radius { border-radius: var(--soft-ui-radius); }
+.soft-ui-radius-md { border-radius: var(--soft-ui-radius-md); }
+.soft-ui-radius-lg { border-radius: var(--soft-ui-radius-lg); }
+.soft-ui-radius-xl { border-radius: var(--soft-ui-radius-xl); }
+.soft-ui-radius-2xl { border-radius: var(--soft-ui-radius-2xl); }
+.soft-ui-radius-full { border-radius: var(--soft-ui-radius-full); }
+
+/* Soft UI Spacing Classes */
+.soft-ui-space-1 { margin: var(--soft-ui-space-1); }
+.soft-ui-space-2 { margin: var(--soft-ui-space-2); }
+.soft-ui-space-3 { margin: var(--soft-ui-space-3); }
+.soft-ui-space-4 { margin: var(--soft-ui-space-4); }
+.soft-ui-space-5 { margin: var(--soft-ui-space-5); }
+.soft-ui-space-6 { margin: var(--soft-ui-space-6); }
+.soft-ui-space-8 { margin: var(--soft-ui-space-8); }
+.soft-ui-space-10 { margin: var(--soft-ui-space-10); }
+.soft-ui-space-12 { margin: var(--soft-ui-space-12); }
+.soft-ui-space-16 { margin: var(--soft-ui-space-16); }
+.soft-ui-space-20 { margin: var(--soft-ui-space-20); }
+.soft-ui-space-24 { margin: var(--soft-ui-space-24); }
+
+.soft-ui-p-1 { padding: var(--soft-ui-space-1); }
+.soft-ui-p-2 { padding: var(--soft-ui-space-2); }
+.soft-ui-p-3 { padding: var(--soft-ui-space-3); }
+.soft-ui-p-4 { padding: var(--soft-ui-space-4); }
+.soft-ui-p-5 { padding: var(--soft-ui-space-5); }
+.soft-ui-p-6 { padding: var(--soft-ui-space-6); }
+.soft-ui-p-8 { padding: var(--soft-ui-space-8); }
+.soft-ui-p-10 { padding: var(--soft-ui-space-10); }
+.soft-ui-p-12 { padding: var(--soft-ui-space-12); }
+.soft-ui-p-16 { padding: var(--soft-ui-space-16); }
+.soft-ui-p-20 { padding: var(--soft-ui-space-20); }
+.soft-ui-p-24 { padding: var(--soft-ui-space-24); }
+
+/* Soft UI Transition Classes */
+.soft-ui-transition-fast { transition: all var(--soft-ui-transition-fast); }
+.soft-ui-transition { transition: all var(--soft-ui-transition); }
+.soft-ui-transition-slow { transition: all var(--soft-ui-transition-slow); }
+
+/* Soft UI Card Component */
+.soft-ui-card {
+  background: var(--soft-ui-bg-card);
+  border-radius: var(--soft-ui-radius-lg);
+  box-shadow: var(--soft-ui-shadow);
+  border: 1px solid var(--soft-ui-gray-200);
+  overflow: hidden;
+  transition: all var(--soft-ui-transition);
+}
+
+.soft-ui-card:hover {
+  box-shadow: var(--soft-ui-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.soft-ui-card-header {
+  padding: var(--soft-ui-space-6);
+  border-bottom: 1px solid var(--soft-ui-gray-200);
+}
+
+.soft-ui-card-body {
+  padding: var(--soft-ui-space-6);
+}
+
+.soft-ui-card-footer {
+  padding: var(--soft-ui-space-6);
+  border-top: 1px solid var(--soft-ui-gray-200);
+  background: var(--soft-ui-bg-secondary);
+}
+
+/* Soft UI Button Component */
+.soft-ui-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--soft-ui-space-2);
+  padding: var(--soft-ui-space-3) var(--soft-ui-space-6);
+  border-radius: var(--soft-ui-radius);
+  font-family: var(--soft-ui-font-family);
+  font-size: var(--soft-ui-font-size-sm);
+  font-weight: var(--soft-ui-font-weight-medium);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--soft-ui-transition);
+  white-space: nowrap;
+}
+
+.soft-ui-btn-primary {
+  background: var(--soft-ui-primary);
+  color: var(--soft-ui-text-inverse);
+  border-color: var(--soft-ui-primary);
+}
+
+.soft-ui-btn-primary:hover {
+  background: var(--soft-ui-primary-dark);
+  border-color: var(--soft-ui-primary-dark);
+  box-shadow: var(--soft-ui-shadow);
+}
+
+.soft-ui-btn-secondary {
+  background: var(--soft-ui-bg-card);
+  color: var(--soft-ui-text-primary);
+  border-color: var(--soft-ui-gray-300);
+}
+
+.soft-ui-btn-secondary:hover {
+  background: var(--soft-ui-bg-tertiary);
+  border-color: var(--soft-ui-gray-400);
+}
+
+.soft-ui-btn-success {
+  background: var(--soft-ui-success);
+  color: var(--soft-ui-text-inverse);
+  border-color: var(--soft-ui-success);
+}
+
+.soft-ui-btn-success:hover {
+  background: var(--soft-ui-success-dark);
+  border-color: var(--soft-ui-success-dark);
+}
+
+.soft-ui-btn-warning {
+  background: var(--soft-ui-warning);
+  color: var(--soft-ui-text-inverse);
+  border-color: var(--soft-ui-warning);
+}
+
+.soft-ui-btn-warning:hover {
+  background: var(--soft-ui-warning-dark);
+  border-color: var(--soft-ui-warning-dark);
+}
+
+.soft-ui-btn-danger {
+  background: var(--soft-ui-danger);
+  color: var(--soft-ui-text-inverse);
+  border-color: var(--soft-ui-danger);
+}
+
+.soft-ui-btn-danger:hover {
+  background: var(--soft-ui-danger-dark);
+  border-color: var(--soft-ui-danger-dark);
+}
+
+/* Soft UI Input Component */
+.soft-ui-input {
+  width: 100%;
+  padding: var(--soft-ui-space-3) var(--soft-ui-space-4);
+  border-radius: var(--soft-ui-radius);
+  border: 1px solid var(--soft-ui-gray-300);
+  background: var(--soft-ui-bg-card);
+  font-family: var(--soft-ui-font-family);
+  font-size: var(--soft-ui-font-size-sm);
+  color: var(--soft-ui-text-primary);
+  transition: all var(--soft-ui-transition);
+}
+
+.soft-ui-input:focus {
+  outline: none;
+  border-color: var(--soft-ui-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.soft-ui-input::placeholder {
+  color: var(--soft-ui-text-tertiary);
+}
+
+/* Soft UI Badge Component */
+.soft-ui-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--soft-ui-space-1) var(--soft-ui-space-3);
+  border-radius: var(--soft-ui-radius-full);
+  font-size: var(--soft-ui-font-size-xs);
+  font-weight: var(--soft-ui-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.soft-ui-badge-primary {
+  background: var(--soft-ui-primary);
+  color: var(--soft-ui-text-inverse);
+}
+
+.soft-ui-badge-secondary {
+  background: var(--soft-ui-secondary);
+  color: var(--soft-ui-text-inverse);
+}
+
+.soft-ui-badge-success {
+  background: var(--soft-ui-success);
+  color: var(--soft-ui-text-inverse);
+}
+
+.soft-ui-badge-warning {
+  background: var(--soft-ui-warning);
+  color: var(--soft-ui-text-inverse);
+}
+
+.soft-ui-badge-danger {
+  background: var(--soft-ui-danger);
+  color: var(--soft-ui-text-inverse);
+}
+
+.soft-ui-badge-info {
+  background: var(--soft-ui-info);
+  color: var(--soft-ui-text-inverse);
+}
+
+.soft-ui-badge-outline {
+  background: transparent;
+  border: 1px solid var(--soft-ui-gray-300);
+  color: var(--soft-ui-text-secondary);
+}
+
+/* Soft UI Progress Component */
+.soft-ui-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--soft-ui-gray-200);
+  border-radius: var(--soft-ui-radius-full);
+  overflow: hidden;
+}
+
+.soft-ui-progress-bar {
+  height: 100%;
+  background: var(--soft-ui-primary-gradient);
+  border-radius: var(--soft-ui-radius-full);
+  transition: width var(--soft-ui-transition-slow);
+}
+
+/* Soft UI Table Component */
+.soft-ui-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--soft-ui-bg-card);
+  border-radius: var(--soft-ui-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--soft-ui-shadow);
+}
+
+.soft-ui-table th {
+  padding: var(--soft-ui-space-4);
+  text-align: left;
+  font-size: var(--soft-ui-font-size-sm);
+  font-weight: var(--soft-ui-font-weight-semibold);
+  color: var(--soft-ui-text-secondary);
+  background: var(--soft-ui-bg-secondary);
+  border-bottom: 1px solid var(--soft-ui-gray-200);
+}
+
+.soft-ui-table td {
+  padding: var(--soft-ui-space-4);
+  font-size: var(--soft-ui-font-size-sm);
+  color: var(--soft-ui-text-primary);
+  border-bottom: 1px solid var(--soft-ui-gray-100);
+}
+
+.soft-ui-table tr:hover {
+  background: var(--soft-ui-bg-secondary);
+}
+
+/* Soft UI Responsive Utilities */
+.soft-ui-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--soft-ui-space-4);
+}
+
+@media (min-width: 640px) {
+  .soft-ui-container {
+    padding: 0 var(--soft-ui-space-6);
+  }
+}
+
+@media (min-width: 1024px) {
+  .soft-ui-container {
+    padding: 0 var(--soft-ui-space-8);
+  }
+}
+
+/* Soft UI Grid System */
+.soft-ui-grid {
+  display: grid;
+  gap: var(--soft-ui-space-4);
+}
+
+.soft-ui-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.soft-ui-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.soft-ui-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.soft-ui-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.soft-ui-grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.soft-ui-grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+
+@media (min-width: 640px) {
+  .soft-ui-sm\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .soft-ui-sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .soft-ui-sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .soft-ui-sm\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .soft-ui-sm\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .soft-ui-sm\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+@media (min-width: 768px) {
+  .soft-ui-md\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .soft-ui-md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .soft-ui-md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .soft-ui-md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .soft-ui-md\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .soft-ui-md\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .soft-ui-lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+  .soft-ui-lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .soft-ui-lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .soft-ui-lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .soft-ui-lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .soft-ui-lg\:grid-cols-12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+/* Soft UI Flex Utilities */
+.soft-ui-flex { display: flex; }
+.soft-ui-inline-flex { display: inline-flex; }
+.soft-ui-flex-col { flex-direction: column; }
+.soft-ui-flex-row { flex-direction: row; }
+.soft-ui-flex-wrap { flex-wrap: wrap; }
+.soft-ui-flex-nowrap { flex-wrap: nowrap; }
+
+.soft-ui-items-start { align-items: flex-start; }
+.soft-ui-items-center { align-items: center; }
+.soft-ui-items-end { align-items: flex-end; }
+.soft-ui-items-stretch { align-items: stretch; }
+
+.soft-ui-justify-start { justify-content: flex-start; }
+.soft-ui-justify-center { justify-content: center; }
+.soft-ui-justify-end { justify-content: flex-end; }
+.soft-ui-justify-between { justify-content: space-between; }
+.soft-ui-justify-around { justify-content: space-around; }
+
+.soft-ui-flex-1 { flex: 1; }
+.soft-ui-flex-auto { flex: auto; }
+.soft-ui-flex-none { flex: none; }
+
+/* Soft UI Display Utilities */
+.soft-ui-block { display: block; }
+.soft-ui-inline-block { display: inline-block; }
+.soft-ui-inline { display: inline; }
+.soft-ui-hidden { display: none; }
+
+/* Soft UI Position Utilities */
+.soft-ui-relative { position: relative; }
+.soft-ui-absolute { position: absolute; }
+.soft-ui-fixed { position: fixed; }
+.soft-ui-sticky { position: sticky; }
+
+/* Soft UI Text Utilities */
+.soft-ui-text-left { text-align: left; }
+.soft-ui-text-center { text-align: center; }
+.soft-ui-text-right { text-align: right; }
+.soft-ui-text-justify { text-align: justify; }
+
+.soft-ui-uppercase { text-transform: uppercase; }
+.soft-ui-lowercase { text-transform: lowercase; }
+.soft-ui-capitalize { text-transform: capitalize; }
+
+.soft-ui-truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Soft UI Visibility Utilities */
+.soft-ui-visible { visibility: visible; }
+.soft-ui-invisible { visibility: hidden; }
+
+/* Soft UI Opacity Utilities */
+.soft-ui-opacity-0 { opacity: 0; }
+.soft-ui-opacity-25 { opacity: 0.25; }
+.soft-ui-opacity-50 { opacity: 0.5; }
+.soft-ui-opacity-75 { opacity: 0.75; }
+.soft-ui-opacity-100 { opacity: 1; }
+
+/* Soft UI Hover Utilities */
+.soft-ui-hover\:shadow-md:hover { box-shadow: var(--soft-ui-shadow-md); }
+.soft-ui-hover\:shadow-lg:hover { box-shadow: var(--soft-ui-shadow-lg); }
+.soft-ui-hover\:shadow-xl:hover { box-shadow: var(--soft-ui-shadow-xl); }
+
+/* Soft UI Focus Utilities */
+.soft-ui-focus\:outline-none:focus { outline: none; }
+.soft-ui-focus\:ring:focus { box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1); }

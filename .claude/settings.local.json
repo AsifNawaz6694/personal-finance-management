@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sI http://localhost:8000/up)",
+      "Bash(curl -s -o /tmp/idx.html -w \"HTTP %{http_code}\\\\n\" http://localhost:8000/budgets/dashboard)",
+      "Read(//tmp/**)",
+      "Bash(curl -sI http://localhost:8000/budgets/dashboard)",
+      "Bash(php artisan *)",
+      "Bash(curl -sb /tmp/cookies.txt http://localhost:8000/budgets/analytics/predictions -o /tmp/preds.html -w \"HTTP %{http_code}\\\\n\")",
+      "Bash(grep -oE '\"props\":\\\\{[^}]{0,200}' /tmp/preds.html)",
+      "Bash(grep -oE 'data-page=&quot;[^\"]{0,200}' /tmp/preds.html)",
+      "Bash(grep -oE 'component[^,}]{0,80}' /tmp/preds.html)",
+      "Bash(curl -sc /tmp/cookies.txt -b /tmp/cookies.txt http://localhost:8000/budgets/create -o /dev/null)",
+      "Bash(awk '{ if\\($1 !~ /^#/ && NF >= 7\\) print $1, $6, \"=>\", substr\\($7,1,40\\) }' /tmp/cookies.txt)",
+      "Bash(curl -sb /tmp/cookies.txt -o /tmp/debts.html -w \"%{http_code}\" \"http://localhost:8000/budgets/debts\")",
+      "Bash(grep -oE 'debts\\\\\\\\u0022:\\\\{[^}]{0,50}|debts&quot;:\\\\{[^}]{0,50}' /tmp/debts.html)",
+      "Bash(npx vite *)",
+      "Bash(curl -sb /tmp/cookies.txt -o /dev/null -w \"%{http_code}\" http://localhost:8000/roles)",
+      "Bash(curl -sb /tmp/cookies.txt -o /dev/null -w \"%{http_code}\" http://localhost:8000/budgets/dashboard)",
+      "Bash(curl -sb /tmp/cookies.txt -o /tmp/dash.html -w \"%{http_code}\" http://localhost:8000/budgets/dashboard)",
+      "Bash(grep -oE \"budget_utilization[^,}]{0,30}\" /tmp/dash.html)",
+      "Bash(grep -oE \"formatted_target_amount[^,}]{0,30}\" /tmp/dash.html)"
+    ]
+  }
+}
